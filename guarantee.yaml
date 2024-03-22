@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: confirm
+  labels: 
+    app: apache
+    client: abc
+    team: sre
+spec:
+  containers:
+  - name: boxone
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+    resources:
+      limits:
+        cpu: 200m
+        memory: 256Mi
+      requests:
+        cpu: 200m
+        memory: 256Mi

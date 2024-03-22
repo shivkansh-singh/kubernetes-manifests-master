@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-web-axis
+  labels:
+    name: apache
+    managed-by: teama
+    version: "2.4"
+    component: frontend
+    part-of: webserver
+    instance: aug2023
+    client: axis
+    env: dev
+spec: 
+  containers:
+  - name: boxone
+    image: lovelearnlinux/webserver:v1
+    ports:
+    - containerPort: 80 

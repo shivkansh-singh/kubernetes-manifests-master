@@ -1,0 +1,14 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prodtwo
+#  namespace: dev
+  labels:
+    app: prodtwo
+spec:
+  containers:
+  - name: boxone
+    image: lovelearnlinux/webserver:v1
+    ports:
+    - containerPort: 80
